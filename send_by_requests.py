@@ -1,11 +1,14 @@
 import requests
 import time
+from dotenv import dotenv_values
 
 API_URL = 'https://api.telegram.org/bot'
 API_CATS_URL = 'https://api.thecatapi.com/v1/images/search'
 API_FOX_URL = 'https://randomfox.ca/floof/'
 
-BOT_TOKEN = '8225505028:AAHT0CziN-L1TD4OK97JixJ9OJa4Qnj4h78'
+
+ENV = dotenv_values('.env')
+BOT_TOKEN = ENV.get('BOT_TOKEN')
 ERROR_TEXT = 'Здесь должна была быть картинка с котиком :('
 
 
